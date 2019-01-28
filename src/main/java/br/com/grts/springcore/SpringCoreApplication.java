@@ -15,7 +15,7 @@ public class SpringCoreApplication {
     ApplicationContext ctx = SpringApplication.run(SpringCoreApplication.class, args);
 
     MyController bean = (MyController) ctx.getBean("myController");
-    bean.hello();
+    System.out.println(bean.hello());
 
     System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
     System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
